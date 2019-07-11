@@ -1,16 +1,8 @@
-# SealNote
+# SealNote Plus
 
-**ARCHIVED! NOT MAINTAINED!**
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](COPYING.md)
-[![Build Status](https://travis-ci.org/vishesh/sealnote.svg?branch=master)](https://travis-ci.org/vishesh/sealnote)
-[![Coverage Status](https://codecov.io/gh/vishesh/sealnote/coverage.svg?branch=master)](https://codecov.io/gh/vishesh/sealnote?branch=master)
-<a href="https://f-droid.org/repository/browse/?fdid=com.twistedplane.sealnote" target="_blank">
-<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="40"/></a>
-<a href="https://play.google.com/store/apps/details?id=com.twistedplane.sealnote" target="_blank">
-<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="40"/></a>
-
-SealNote is simple notes/notepad application which focuses on security and
+SealNote Plus is a simple notes/notepad application which focuses on security and
 simplicity. Your notes are password protected using 256-bit AES encryption.
 Keep sensitive information always available without compromising security!
 
@@ -29,9 +21,8 @@ Advantage of encrypting notes
 * Keep private information such as credit cards, bank account and passwords
   in a single place
 * Notes are encrypted locally so no one else can access them, unless they
-  have password.
-* Since encryption is done at storage level, access of notes directly from
-  disk is not possible. Hence if you ever lose phone, you won't lose your
+  have the password.
+* Since encryption is done at storage level, if you ever lose your phone, you won't lose your
   notes to thieves.
 
 Frequently Asked Questions (FAQ)
@@ -63,6 +54,13 @@ You probably have enabled "Secure Window" feature in SealNote settings.
 Disable it to be able to take screenshots or show window content in application
 switcher.
 
+History
+--------------------------------
+
+This project is a fork of the original SealNote codebase, which is no longer maintained. That app is still available on Play Store, but has serious bugs, for example backup is broken on Android 8+.
+
+SealNote Plus is currently not published on Play Store, but will be in future, after necessary improvements have been made.
+
 Contributing
 --------------------------------
 
@@ -70,7 +68,7 @@ Contributions are much appreciated. Please go through this section to
 understand how and what to contribute.
 
 If you need ideas for contribution, please check currently [open
-issues](https://github.com/vishesh/sealnote/issues). If you want to propose a
+issues](https://github.com/hawknetwork/sealnote-plus/issues). If you want to propose a
 new feature, please open a new issue. A good feature can be something which
 improves some workflow or security for a user.
 
@@ -81,12 +79,12 @@ improves some workflow or security for a user.
 
 ### How to submit a pull request
 
-1. Clone sealnote: `git clone https://github.com/vishesh/sealnote.git && cd sealnote`
+1. Clone sealnote plus: `git clone https://github.com/hawknetwork/sealnote-plus.git && cd sealnote-plus`
 2. Verify that build succeeds: `./gradlew assembleDebug`
 3. Create a topic branch: `git checkout -b feature`
 4. Make your changes.
-5. Fork sealnote on GitHub.
-6. Add your fork as remote: `git remote add <YOUR-USER> https://github.com/<YOUR-USER>/sealnote.git`
+5. Fork sealnote-plus on GitHub.
+6. Add your fork as remote: `git remote add <YOUR-USER> https://github.com/<YOUR-USER>/sealnote-plus.git`
 7. Push to your fork: `git push -u <YOUR-USER> HEAD`
 8. Open a pull request against **master** branch describing your changes.
 
@@ -115,7 +113,5 @@ general contribution guidelines when submitting a patch for documents.
 
 Contact
 -------
-Homepage: www.twistedplane.com
-Email   : contact@twistedplane.com
 
-Send bugs to the above email with [Sealnote][BUG] tags in subject.
+Please raise an issue on GitHub if you find any bugs.
