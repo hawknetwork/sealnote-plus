@@ -1,6 +1,20 @@
+# Default Android Studio gitignore (as of 3.4.2)
+
+*.iml
 .gradle
-.idea/
 /local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
 /.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
 .DS_Store
-build/
+/build
+/captures
+.externalNativeBuild
+
+# Build directories from modules
+
+Sealnote/build
+aFileChooser/build
