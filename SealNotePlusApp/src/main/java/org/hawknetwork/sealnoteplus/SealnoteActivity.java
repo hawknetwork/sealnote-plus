@@ -417,7 +417,7 @@ public class SealnoteActivity extends Activity
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setIcon(R.drawable.ic_launcher);
-        builder.setTitle(R.string.app_name);
+        builder.setTitle(R.string.full_app_name);
         builder.setView(messageView);
         builder.create();
         builder.show();

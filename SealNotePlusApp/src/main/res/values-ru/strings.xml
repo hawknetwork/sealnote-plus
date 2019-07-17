@@ -2,7 +2,8 @@
 <!--     Strings -->
 <resources>
 
-    <string name="app_name">SealNote</string>
+    <string name="short_app_name">SealNote</string>
+    <string name="full_app_name">SealNote</string>
     <string name="app_description">Цель проста - создать быстрый, простой и &lt;b &gt;надёжный&lt;/b блокнот. Ваши заметки шифруются стойким 256-битным алгоритмом AES. Больше не стоит волноваться о краже данных злоумышленниками.</string>
     <string name="app_credits"><b >TwistedPlane:</b>\n
   www.twistedplane.com\n

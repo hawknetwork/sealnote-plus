@@ -2,7 +2,8 @@
 <!--     Strings -->
 <resources>
 
-    <string name="app_name">SealNote</string>
+    <string name="short_app_name">SealNote+</string>
+    <string name="full_app_name">SealNote Plus</string>
     <string name="app_description">目的は簡単です。 すばやく簡単に <b>安全な</b> メモ帳を提供します。 あなたのメモ帳は、強力な256ビットAESアルゴリズムを使用して暗号化されています。 悪意のある人々によってあなたの個人情報を失う心配がなくなりました。</string>
     <string name="app_credits"><b>TwistedPlane:</b>\nwww.twistedplane.com\ncontact@twistedplane.com"\n<b>貢献者:</b>\nhttps://github.com/vishesh/sealnote/graphs/contributors</string>
 

@@ -2,7 +2,8 @@
 <!--     Strings -->
 <resources>
 
-    <string name="app_name">SealNote</string>
+    <string name="short_app_name">SealNote+</string>
+    <string name="full_app_name">SealNote Plus</string>
     <string name="app_description">L\'obiettivo è semplice: fornire un editor di note rapido, semplice e <b>sicuro</b>. Le note vengono crittografate tramite il solido algoritmo AES a 256 bit. Non dovrai più preoccuparti che informazioni riservate finiscano nelle mani sbagliate.</string>
     <string name="app_credits"><b>TwistedPlane:</b>\nwww.twistedplane.com\ncontact@twistedplane.com"\n<b>Hanno contribuito:</b>\nhttps://github.com/vishesh/sealnote/graphs/contributors</string>
 

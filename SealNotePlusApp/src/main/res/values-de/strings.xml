@@ -2,7 +2,8 @@
 <!--     Strings -->
 <resources>
 
-    <string name="app_name">SealNote</string>
+    <string name="short_app_name">SealNote+</string>
+    <string name="full_app_name">SealNote Plus</string>
     <string name="app_description">Die Absicht ist einfach. Eine schnelle, einfache und <b>sichere</b> Notizanwendung anzubieten. Ihre Notizen werden verschlüsselt unter Verwendung eines starken 256-bit AES Algorithmus. Sie müssen nicht länger besorgt sein, daß böswillige Leute sich Zugang zu Ihren privaten Notizen verschaffen.</string>
     <string name="app_credits"><b>TwistedPlane:</b>\nwww.twistedplane.com\ncontact@twistedplane.com"\n<b>Contributors:</b>\nhttps://github.com/vishesh/sealnote/graphs/contributors</string>
 
