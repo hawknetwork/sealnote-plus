@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.twistedplane.sealnote.view.staggeredgrid.StaggeredGridView
+<org.hawknetwork.sealnoteplus.view.staggeredgrid.StaggeredGridView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card="http://schemas.android.com/apk/res-auto"
         android:id="@+id/notes_view"

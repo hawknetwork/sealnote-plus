@@ -30,7 +30,7 @@
                 android:summary="@string/pref_passwordTimeoutSummary"
                 />
 
-        <com.twistedplane.sealnote.settings.PasswordPreference
+        <org.hawknetwork.sealnoteplus.settings.PasswordPreference
             android:title="@string/pref_changePassword"
             android:dialogTitle="@string/pref_changePassword"
             />
@@ -68,8 +68,8 @@
                 android:persistent="false">
             <intent
                     android:action="android.intent.action.VIEW"
-                    android:targetPackage="com.twistedplane.sealnote"
-                    android:targetClass="com.twistedplane.sealnote.BackupActivity"
+                    android:targetPackage="org.hawknetwork.sealnoteplus"
+                    android:targetClass="org.hawknetwork.sealnoteplus.BackupActivity"
                     />
         </Preference>
 
@@ -78,8 +78,8 @@
                 android:persistent="false">
             <intent
                     android:action="android.intent.action.VIEW"
-                    android:targetPackage="com.twistedplane.sealnote"
-                    android:targetClass="com.twistedplane.sealnote.RestoreActivity"
+                    android:targetPackage="org.hawknetwork.sealnoteplus"
+                    android:targetClass="org.hawknetwork.sealnoteplus.RestoreActivity"
                     />
         </Preference>
     </PreferenceCategory>
@@ -90,17 +90,17 @@
                 android:persistent="false">
             <intent
                     android:action="android.intent.action.VIEW"
-                    android:data="market://details?id=com.twistedplane.sealnote"
+                    android:data="market://details?id=org.hawknetwork.sealnoteplus"
                     />
         </Preference>
-        <com.twistedplane.sealnote.settings.VersionPreference />
+        <org.hawknetwork.sealnoteplus.settings.VersionPreference />
         <Preference
                 android:title="@string/acknowledgements"
                 android:persistent="false">
             <intent
                     android:action="android.intent.action.VIEW"
-                    android:targetPackage="com.twistedplane.sealnote"
-                    android:targetClass="com.twistedplane.sealnote.WebViewActivity"
+                    android:targetPackage="org.hawknetwork.sealnoteplus"
+                    android:targetClass="org.hawknetwork.sealnoteplus.WebViewActivity"
                     />
         </Preference>
     </PreferenceCategory>
