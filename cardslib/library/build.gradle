@@ -1,0 +1,28 @@
+// Modified by SealNote Plus project to remove SDK Manager, add variable prefix and remove build tools version
+apply plugin: 'android-library'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion rootProject.ext.cardslib_compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionName project.VERSION_NAME
+        versionCode Integer.parseInt(project.VERSION_CODE)
+    }
+
+    // This is important, it will run lint checks but won't abort build
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+}
+
+// Used to update in Maven
+//apply from: '../maven_push.gradle'

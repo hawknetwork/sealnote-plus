@@ -2,9 +2,10 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:3.4.2'
     }
 }
 apply plugin: 'com.android.application'
@@ -15,7 +16,6 @@ repositories {
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.2'
 
     defaultConfig {
         minSdkVersion 14
@@ -60,17 +60,17 @@ android {
 
 
 dependencies {
-    compile 'com.android.support:support-v4:25.1.1'
-    compile 'com.etsy.android.grid:library:1.0.4'
-    compile 'com.github.gabrielemariotti.cards:library:1.6.0'
-    compile 'com.github.gabrielemariotti.cards:library-extra:1.6.0'
-    compile 'com.nhaarman.listviewanimations:library:2.6.0'
+    implementation 'com.android.support:support-v4:25.1.1'
+    implementation 'com.etsy.android.grid:library:1.0.4'
+    implementation 'com.nhaarman.listviewanimations:library:2.6.0'
 
-    compile 'com.github.codechimp-org.apprater:library:1.0.32'
-    compile 'net.zetetic:android-database-sqlcipher:3.5.6@aar'
+    implementation 'com.github.codechimp-org.apprater:library:1.0.32'
+    implementation 'net.zetetic:android-database-sqlcipher:3.5.6@aar'
 
-    compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
-    compile group: 'com.google.guava', name: 'guava', version: 'r09'
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.10'
+    implementation group: 'com.google.guava', name: 'guava', version: 'r09'
 
-    compile project(':aFileChooser')
+    implementation project(':aFileChooser')
+    implementation project(':library')
+    implementation project(':library-extra')
 }

@@ -1,1 +1,3 @@
-include ':Sealnote', ':aFileChooser'
+include ':Sealnote', ':aFileChooser', ':library', ':library-extra'
+project(':library').projectDir = new File('cardslib/library')
+project(':library-extra').projectDir = new File('cardslib/library-extra')

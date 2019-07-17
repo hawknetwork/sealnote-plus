@@ -1,0 +1,34 @@
+// Modified by SealNote Plus project to remove SDK Manager, add variable prefix, change compile to implementation, remove build tools version
+apply plugin: 'android-library'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion rootProject.ext.cardslib_compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionName project.VERSION_NAME
+        versionCode Integer.parseInt(project.VERSION_CODE)
+    }
+
+    // This is important, it will run lint checks but won't abort build
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    // Cards Library
+    implementation project(':library')
+    //StaggeredGrid
+    implementation 'com.etsy.android.grid:library:1.0.4'
+    //DynamicList
+    implementation 'com.nhaarman.listviewanimations:library:2.6.0'
+}
+
+// Used to update in Maven
+//apply from: '../maven_push.gradle'
