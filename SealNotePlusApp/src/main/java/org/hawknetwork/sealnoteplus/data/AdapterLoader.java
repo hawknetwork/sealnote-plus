@@ -4,8 +4,8 @@ import android.content.AsyncTaskLoader;
 import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
-import org.hawknetwork.sealnoteplus.SealnoteApplication;
-import org.hawknetwork.sealnoteplus.fragment.SealnoteFragment;
+import org.hawknetwork.sealnoteplus.SealNotePlusApplication;
+import org.hawknetwork.sealnoteplus.fragment.NoteListFragment;
 
 /**
  * Loader for loading notes in Adapter
@@ -20,9 +20,9 @@ public class AdapterLoader extends AsyncTaskLoader<Cursor> {
      */
     @Override
     public Cursor loadInBackground() {
-        Log.d(SealnoteFragment.TAG, "Adapter loader started!");
+        Log.d(NoteListFragment.TAG, "Adapter loader started!");
 
-        final DatabaseHandler db = SealnoteApplication.getDatabase();
+        final DatabaseHandler db = SealNotePlusApplication.getDatabase();
         final Cursor cursor;
 
         switch (currentFolder) {
@@ -47,7 +47,7 @@ public class AdapterLoader extends AsyncTaskLoader<Cursor> {
 
     public AdapterLoader(Context context, Note.Folder currentFolder, int tagid) {
         super(context);
-        Log.d(SealnoteFragment.TAG, "New adapter loader created");
+        Log.d(NoteListFragment.TAG, "New adapter loader created");
         this.currentFolder = currentFolder;
         this.tagid = tagid;
     }

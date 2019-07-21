@@ -9,11 +9,11 @@ import it.gmariotti.cardslib.library.extra.staggeredgrid.internal.CardGridStagge
 import it.gmariotti.cardslib.library.extra.staggeredgrid.view.CardGridStaggeredView;
 
 /**
- * Specialized CardGridStaggeredView class used in SealNote.
+ * Specialized CardGridStaggeredView class used in SealNote Plus.
  *
  *   + Add support for cursor adapter
- *   + Changes to make column mode change as per latest Sealnote settings
- *     preferences
+ *   + Changes to make column mode change as per latest SealNote Plus settings
+ *     (preferences)
  */
 public class StaggeredGridView extends CardGridStaggeredView {
     public final static String TAG = "StaggeredGridView";

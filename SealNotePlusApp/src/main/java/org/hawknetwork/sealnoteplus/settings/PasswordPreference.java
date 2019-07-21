@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import org.hawknetwork.sealnoteplus.R;
-import org.hawknetwork.sealnoteplus.SealnoteApplication;
+import org.hawknetwork.sealnoteplus.SealNotePlusApplication;
 import org.hawknetwork.sealnoteplus.data.DatabaseHandler;
 import org.hawknetwork.sealnoteplus.view.PasswordInput;
 import net.sqlcipher.database.SQLiteException;
@@ -160,7 +160,7 @@ public class PasswordPreference extends DialogPreference implements TextWatcher 
      * @return              True if password changed successfully, else false
      */
     private boolean changePassword(String oldDbPassword, String oldPassword, String newPassword) {
-        DatabaseHandler db = SealnoteApplication.getDatabase();
+        DatabaseHandler db = SealNotePlusApplication.getDatabase();
 
         // Recycle old password, set new one and check if given old password
         // is correct
@@ -187,7 +187,7 @@ public class PasswordPreference extends DialogPreference implements TextWatcher 
 
         // Recycle old password and state, and set new password in handler
         db.recycle();
-        SealnoteApplication.getDatabase().setPassword(newPassword);
+        SealNotePlusApplication.getDatabase().setPassword(newPassword);
         db.update();
 
         return true;
@@ -209,7 +209,7 @@ public class PasswordPreference extends DialogPreference implements TextWatcher 
             mChangeButton.setEnabled(false);
             mChangeButton.setText(R.string.please_wait);
 
-            DatabaseHandler db = SealnoteApplication.getDatabase();
+            DatabaseHandler db = SealNotePlusApplication.getDatabase();
             oldDbPassword = db.getPassword();
             oldPassword = mOldView.getText().toString();
             newPassword = mNewView.getText();

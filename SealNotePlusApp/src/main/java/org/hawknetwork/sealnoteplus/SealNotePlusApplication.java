@@ -7,8 +7,8 @@ import net.sqlcipher.database.SQLiteDatabase;
 
 import java.lang.reflect.Field;
 
-public class SealnoteApplication extends Application {
-    public final static String TAG = "SealnoteApplication";
+public class SealNotePlusApplication extends Application {
+    public final static String TAG = "SealNotePlusApplication";
 
     private static DatabaseHandler mDatabase;
 

@@ -5,11 +5,7 @@
     <string name="short_app_name">SealNote</string>
     <string name="full_app_name">SealNote</string>
     <string name="app_description">Цель проста - создать быстрый, простой и &lt;b &gt;надёжный&lt;/b блокнот. Ваши заметки шифруются стойким 256-битным алгоритмом AES. Больше не стоит волноваться о краже данных злоумышленниками.</string>
-    <string name="app_credits"><b >TwistedPlane:</b>\n
-  www.twistedplane.com\n
-  contact@twistedplane.com\"\n
-  <b >Помощники:</b>\n
-  https://github.com/vishesh/sealnote/graphs/contributors</string>
+    <string name="app_credits"><b>GitHub:</b>https://github.com/hawknetwork/sealnote-plus\n<b>Помощники:</b>\nhttps://github.com/hawknetwork/sealnote-plus/graphs/contributors</string>
 
     <!-- Activities -->
     <string name="title_activity_note">« »</string>
@@ -134,7 +130,7 @@
 
     <string name="info_restore_message">
         <![CDATA[
-        Откройте <font color="#cc0000">зашифрованную резервную копию</font> <font color="#259b24">SealNote</font>.
+        Откройте <font color="#cc0000">зашифрованную резервную копию</font> <font color="#259b24">SealNote Plus</font>.
         ]]>
     </string>
 

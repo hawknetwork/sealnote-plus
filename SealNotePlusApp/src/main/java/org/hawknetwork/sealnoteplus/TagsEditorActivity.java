@@ -11,8 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 
-import org.hawknetwork.sealnoteplus.R;
-
 import org.hawknetwork.sealnoteplus.data.DatabaseHandler;
 import org.hawknetwork.sealnoteplus.utils.Misc;
 import org.hawknetwork.sealnoteplus.utils.TimeoutHandler;
@@ -36,7 +34,7 @@ public class TagsEditorActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         Misc.secureWindow(this);
 
-        mHandler = SealnoteApplication.getDatabase();
+        mHandler = SealNotePlusApplication.getDatabase();
         mTagMap = mHandler.getAllTags();
         mTagCount = mHandler.getAllTagsCount();
         mAdapterData = new ArrayList<String>(mTagMap.keySet());

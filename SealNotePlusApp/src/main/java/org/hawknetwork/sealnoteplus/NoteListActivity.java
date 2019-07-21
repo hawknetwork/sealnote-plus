@@ -19,11 +19,9 @@ import android.util.Log;
 import android.view.*;
 import android.widget.*;
 
-import org.hawknetwork.sealnoteplus.R;
-
 import org.hawknetwork.sealnoteplus.data.DatabaseHandler;
 import org.hawknetwork.sealnoteplus.data.Note;
-import org.hawknetwork.sealnoteplus.fragment.SealnoteFragment;
+import org.hawknetwork.sealnoteplus.fragment.NoteListFragment;
 import org.hawknetwork.sealnoteplus.utils.FontCache;
 import org.hawknetwork.sealnoteplus.utils.Misc;
 import org.hawknetwork.sealnoteplus.utils.PreferenceHandler;
@@ -40,9 +38,9 @@ import java.util.Set;
 /**
  * Main activity where all cards are listed in a staggered grid
  */
-public class SealnoteActivity extends Activity
+public class NoteListActivity extends Activity
         implements SharedPreferences.OnSharedPreferenceChangeListener {
-    public final static String TAG = "SealnoteActivity";
+    public final static String TAG = "NoteListActivity";
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -53,7 +51,7 @@ public class SealnoteActivity extends Activity
     private int mTagId;
     private String mTagName;
 
-    private SealnoteFragment mSealnoteFragment;
+    private NoteListFragment mNoteListFragment;
     private boolean mReloadFragment = false;
 
     /**
@@ -64,7 +62,7 @@ public class SealnoteActivity extends Activity
         super.onCreate(savedInstanceState);
         Log.d(TAG, "Creating main activity...");
 
-        if (SealnoteApplication.getDatabase().getPassword() == null) {
+        if (SealNotePlusApplication.getDatabase().getPassword() == null) {
             // onResume will follow up which will start PasswordActivity and setup database password
             Log.d(TAG, "Password can't be found while creating activity. Start PasswordActivity");
             return;
@@ -117,23 +115,23 @@ public class SealnoteActivity extends Activity
 
         switch (type) {
             case VIEW_TILES:
-                mSealnoteFragment = new StaggeredGridFragment();
+                mNoteListFragment = new StaggeredGridFragment();
                 break;
             case VIEW_COLUMN:
-                mSealnoteFragment = new StaggeredGridFragment();
+                mNoteListFragment = new StaggeredGridFragment();
                 break;
             case VIEW_SIMPLE_LIST:
-                mSealnoteFragment = new SimpleListFragment();
+                mNoteListFragment = new SimpleListFragment();
                 break;
         }
 
         Bundle bundle = new Bundle();
         bundle.putString("SN_FOLDER", mCurrentFolder.name());
         bundle.putInt("SN_TAGID", mTagId);
-        mSealnoteFragment.setArguments(bundle);
+        mNoteListFragment.setArguments(bundle);
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment_container, mSealnoteFragment);
+        transaction.replace(R.id.fragment_container, mNoteListFragment);
         transaction.commit();
     }
 
@@ -159,7 +157,7 @@ public class SealnoteActivity extends Activity
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
                 if (mReloadFragment) {
-                    mSealnoteFragment.setFolder(mCurrentFolder,  mTagId);
+                    mNoteListFragment.setFolder(mCurrentFolder,  mTagId);
                     getActionBar().setTitle(mTagName);
                     mReloadFragment = false;
                 }
@@ -254,7 +252,7 @@ public class SealnoteActivity extends Activity
     }
 
     private void reloadTagsAdapter() {
-        DatabaseHandler handler = SealnoteApplication.getDatabase();
+        DatabaseHandler handler = SealNotePlusApplication.getDatabase();
         mTags = handler.getAllTags();
         Set<String> tagSet = mTags.keySet();
         String []tags = mTags.keySet().toArray(new String[tagSet.size()]);
@@ -396,10 +394,10 @@ public class SealnoteActivity extends Activity
                 onCreateNoteClick(null);
                 return true;
             case R.id.action_new_note_card:
-                NoteActivity.startForNoteId(SealnoteActivity.this, -1, Note.Type.TYPE_CARD);
+                NoteActivity.startForNoteId(NoteListActivity.this, -1, Note.Type.TYPE_CARD);
                 return true;
             case R.id.action_new_note_login:
-                NoteActivity.startForNoteId(SealnoteActivity.this, -1, Note.Type.TYPE_LOGIN);
+                NoteActivity.startForNoteId(NoteListActivity.this, -1, Note.Type.TYPE_LOGIN);
                 return true;
             case R.id.action_edit_tags:
                 showEditTagsDialog();
@@ -443,7 +441,7 @@ public class SealnoteActivity extends Activity
      * Called when any create new button/action is clicked.
      */
     public void onCreateNoteClick(View view) {
-        NoteActivity.startForNoteId(SealnoteActivity.this, -1, null);
+        NoteActivity.startForNoteId(NoteListActivity.this, -1, null);
     }
 
     /**

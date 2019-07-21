@@ -23,7 +23,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.common.collect.Sets;
-import org.hawknetwork.sealnoteplus.R;
 
 import org.hawknetwork.sealnoteplus.data.DatabaseHandler;
 import org.hawknetwork.sealnoteplus.data.Note;
@@ -183,7 +182,7 @@ public class NoteActivity extends Activity implements ColorDialogFragment.ColorC
 
         // load suggestions
         // TODO: Do this asynchronously if required
-        mTagEditText.loadSuggestions(SealnoteApplication.getDatabase().getAllTags().keySet());
+        mTagEditText.loadSuggestions(SealNotePlusApplication.getDatabase().getAllTags().keySet());
         mTagEditText.setThreshold(1);
 
         // TextWatcher to update share intent
@@ -456,7 +455,7 @@ public class NoteActivity extends Activity implements ColorDialogFragment.ColorC
      * @return true if note saved
      */
     public boolean saveNote(boolean forceSave) {
-        final DatabaseHandler handler = SealnoteApplication.getDatabase();
+        final DatabaseHandler handler = SealNotePlusApplication.getDatabase();
         final String title = mTitleView.getText().toString();
         final NoteContent noteContent = mNoteView.getNoteContent();
         final String text = noteContent.toString();
@@ -498,7 +497,7 @@ public class NoteActivity extends Activity implements ColorDialogFragment.ColorC
      * Delete current note
      */
     public void doDelete() {
-        final DatabaseHandler handler = SealnoteApplication.getDatabase();
+        final DatabaseHandler handler = SealNotePlusApplication.getDatabase();
         handler.trashNote(mNote.getId(), true);
         mNote = null;
         Toast.makeText(this, getResources().getString(R.string.note_deleted), Toast.LENGTH_SHORT).show();
@@ -514,7 +513,7 @@ public class NoteActivity extends Activity implements ColorDialogFragment.ColorC
      * Un-archive a note
      */
     public void doUnarchive() {
-        final DatabaseHandler handler = SealnoteApplication.getDatabase();
+        final DatabaseHandler handler = SealNotePlusApplication.getDatabase();
         handler.archiveNote(mNote.getId(), false);
         mNote = null;
         Toast.makeText(this, getResources().getString(R.string.note_unarchived), Toast.LENGTH_SHORT).show();
@@ -541,7 +540,7 @@ public class NoteActivity extends Activity implements ColorDialogFragment.ColorC
      * Archive current note
      */
     private void doArchiveNote() {
-        final DatabaseHandler handler = SealnoteApplication.getDatabase();
+        final DatabaseHandler handler = SealNotePlusApplication.getDatabase();
         handler.archiveNote(mNote.getId(), true);
         mNote = null;
         Toast.makeText(this, getResources().getString(R.string.note_archived), Toast.LENGTH_SHORT).show();
@@ -581,7 +580,7 @@ public class NoteActivity extends Activity implements ColorDialogFragment.ColorC
      * Restores note from trash
      */
     public void doRestore() {
-        final DatabaseHandler handler = SealnoteApplication.getDatabase();
+        final DatabaseHandler handler = SealNotePlusApplication.getDatabase();
         handler.trashNote(mNote.getId(), false);
         mNote = null;
         Toast.makeText(this, getResources().getString(R.string.note_restored), Toast.LENGTH_SHORT).show();
@@ -650,7 +649,7 @@ public class NoteActivity extends Activity implements ColorDialogFragment.ColorC
          */
         @Override
         protected Note doInBackground(Integer... integers) {
-            DatabaseHandler db = SealnoteApplication.getDatabase();
+            DatabaseHandler db = SealNotePlusApplication.getDatabase();
             return db.getNote(integers[0]);
         }
 

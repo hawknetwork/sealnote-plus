@@ -3,7 +3,7 @@ package org.hawknetwork.sealnoteplus.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
-import org.hawknetwork.sealnoteplus.SealnoteApplication;
+import org.hawknetwork.sealnoteplus.SealNotePlusApplication;
 import org.hawknetwork.sealnoteplus.utils.EasyDate;
 
 import java.text.ParseException;
@@ -234,7 +234,7 @@ public class Note implements Parcelable{
      * tags from database and return them. Use getTags() later
      */
     public Set<String> loadGetTags() {
-        final DatabaseHandler handler = SealnoteApplication.getDatabase();
+        final DatabaseHandler handler = SealNotePlusApplication.getDatabase();
         mTags = handler.getNoteTags(mId);
         return mTags;
     }

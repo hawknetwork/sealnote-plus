@@ -11,7 +11,7 @@ import android.widget.TextView;
 import org.hawknetwork.sealnoteplus.R;
 import org.hawknetwork.sealnoteplus.data.DatabaseHandler;
 import org.hawknetwork.sealnoteplus.data.Note;
-import org.hawknetwork.sealnoteplus.data.SealnoteAdapter;
+import org.hawknetwork.sealnoteplus.data.NoteListAdapter;
 import org.hawknetwork.sealnoteplus.utils.EasyDate;
 import org.hawknetwork.sealnoteplus.utils.FontCache;
 import org.hawknetwork.sealnoteplus.utils.Misc;
@@ -22,7 +22,7 @@ import java.text.ParseException;
 /**
  * Adapter for SimpleListView.
  */
-public class SimpleListAdapter extends SimpleCursorAdapter implements SealnoteAdapter {
+public class SimpleListAdapter extends SimpleCursorAdapter implements NoteListAdapter {
     public final static String TAG = "SimpleListAdapter";
 
     public SimpleListAdapter(Context context, Cursor cursor) {

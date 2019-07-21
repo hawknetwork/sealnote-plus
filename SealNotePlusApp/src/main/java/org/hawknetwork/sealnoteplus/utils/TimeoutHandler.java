@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.util.Log;
 import org.hawknetwork.sealnoteplus.PasswordActivity;
-import org.hawknetwork.sealnoteplus.SealnoteApplication;
+import org.hawknetwork.sealnoteplus.SealNotePlusApplication;
 import org.hawknetwork.sealnoteplus.data.DatabaseHandler;
 
 /**
@@ -51,7 +51,7 @@ public class TimeoutHandler implements Runnable {
      */
     @Override
     public void run() {
-        DatabaseHandler db = SealnoteApplication.getDatabase();
+        DatabaseHandler db = SealNotePlusApplication.getDatabase();
         db.recycle();
         mTimedOut = true;
     }

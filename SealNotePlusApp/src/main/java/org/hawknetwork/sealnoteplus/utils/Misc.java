@@ -8,7 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import org.hawknetwork.sealnoteplus.PasswordActivity;
 import org.hawknetwork.sealnoteplus.R;
-import org.hawknetwork.sealnoteplus.SealnoteApplication;
+import org.hawknetwork.sealnoteplus.SealNotePlusApplication;
 
 /**
  * Miscellaneous helper functions
@@ -71,7 +71,7 @@ public class Misc {
     }
 
     public static boolean isPasswordLoaded() {
-        return SealnoteApplication.getDatabase().getPassword() != null;
+        return SealNotePlusApplication.getDatabase().getPassword() != null;
     }
 
     public static void startPasswordActivity(Activity activity) {

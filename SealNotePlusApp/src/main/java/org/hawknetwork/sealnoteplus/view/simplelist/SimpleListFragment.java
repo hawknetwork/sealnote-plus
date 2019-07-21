@@ -17,13 +17,13 @@ import com.nhaarman.listviewanimations.swinginadapters.prepared.ScaleInAnimation
 import org.hawknetwork.sealnoteplus.NoteActivity;
 import org.hawknetwork.sealnoteplus.R;
 import org.hawknetwork.sealnoteplus.data.Note;
-import org.hawknetwork.sealnoteplus.data.SealnoteAdapter;
-import org.hawknetwork.sealnoteplus.fragment.SealnoteFragment;
+import org.hawknetwork.sealnoteplus.data.NoteListAdapter;
+import org.hawknetwork.sealnoteplus.fragment.NoteListFragment;
 
 /**
  * Fragment where all cards are listed in a simple List View
  */
-public class SimpleListFragment extends SealnoteFragment implements AdapterView.OnItemClickListener {
+public class SimpleListFragment extends NoteListFragment implements AdapterView.OnItemClickListener {
     public final static String TAG = "SimpleListFragment";
     private final MultiChoiceCallback mMultiChoiceCallback = new MultiChoiceCallback();
 
@@ -51,7 +51,7 @@ public class SimpleListFragment extends SealnoteFragment implements AdapterView.
      * Create and return adapter
      */
     @Override
-    protected SealnoteAdapter createAdapter() {
+    protected NoteListAdapter createAdapter() {
         if (mAdapter == null) {
             mAdapter = new SimpleListAdapter(getActivity(), null);
         }

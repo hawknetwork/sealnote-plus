@@ -12,18 +12,18 @@ import org.hawknetwork.sealnoteplus.NoteActivity;
 import org.hawknetwork.sealnoteplus.data.CardGridStaggeredCursorAdapter;
 import org.hawknetwork.sealnoteplus.data.DatabaseHandler;
 import org.hawknetwork.sealnoteplus.data.Note;
-import org.hawknetwork.sealnoteplus.data.SealnoteAdapter;
-import org.hawknetwork.sealnoteplus.internal.SealnoteCard;
+import org.hawknetwork.sealnoteplus.data.NoteListAdapter;
+import org.hawknetwork.sealnoteplus.internal.StaggeredGridCard;
 
 import it.gmariotti.cardslib.library.internal.Card;
 import it.gmariotti.cardslib.library.view.CardView;
 
 /**
- * Adapter for SealnoteStaggeredGrid. Initialized cards and their event listeners. Since
+ * Adapter for SealNote Plus's StaggeredGrid. Initialized cards and their event listeners. Since
  * StaggeredGrid doesn't have multi-choice mode enabled, we emulate this by adding
  * appropriate listeners to card and maintaining the CAB multi-choice state.
  */
-public class StaggeredGridAdapter extends CardGridStaggeredCursorAdapter implements SealnoteAdapter {
+public class StaggeredGridAdapter extends CardGridStaggeredCursorAdapter implements NoteListAdapter {
     public final static String TAG = "StaggeredGridAdapter";
 
     private Note.Folder mCurrentFolder;
@@ -62,11 +62,11 @@ public class StaggeredGridAdapter extends CardGridStaggeredCursorAdapter impleme
      * Called by adapter to convert first row in cursor to Card.
      *
      * @param cursor    Cursor to be converted to note
-     * @return          SealnoteCard object initialized with CAB listeners and data
+     * @return          StaggeredGridCard object initialized with CAB listeners and data
      */
     @Override
     protected Card getCardFromCursor(Cursor cursor) {
-        SealnoteCard card = new SealnoteCard(super.getContext());
+        StaggeredGridCard card = new StaggeredGridCard(super.getContext());
         Note note = DatabaseHandler.cursorToNote(cursor);
 
         card.setNote(note);
@@ -93,7 +93,7 @@ public class StaggeredGridAdapter extends CardGridStaggeredCursorAdapter impleme
              */
             @Override
             public void onClick(Card card, View view) {
-                SealnoteCard sCard = (SealnoteCard) card;
+                StaggeredGridCard sCard = (StaggeredGridCard) card;
                 if (mMultiChoiceCallback == null || !mMultiChoiceCallback.isActionModeActive()) {
                     NoteActivity.startForNoteId(getContext(), sCard.getNote().getId(), null);
                 } else {

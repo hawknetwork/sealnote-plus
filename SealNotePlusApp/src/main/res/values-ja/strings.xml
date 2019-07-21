@@ -5,7 +5,7 @@
     <string name="short_app_name">SealNote+</string>
     <string name="full_app_name">SealNote Plus</string>
     <string name="app_description">目的は簡単です。 すばやく簡単に <b>安全な</b> メモ帳を提供します。 あなたのメモ帳は、強力な256ビットAESアルゴリズムを使用して暗号化されています。 悪意のある人々によってあなたの個人情報を失う心配がなくなりました。</string>
-    <string name="app_credits"><b>TwistedPlane:</b>\nwww.twistedplane.com\ncontact@twistedplane.com"\n<b>貢献者:</b>\nhttps://github.com/vishesh/sealnote/graphs/contributors</string>
+    <string name="app_credits"><b>GitHub:</b>https://github.com/hawknetwork/sealnote-plus\n<b>貢献者:</b>\nhttps://github.com/hawknetwork/sealnote-plus/graphs/contributors</string>
 
     <!-- Activities -->
     <string name="title_activity_note">" "</string>
@@ -129,7 +129,7 @@
 
     <string name="info_restore_message">
         <![CDATA[
-        <font color="#259b24">SealNote バックアップ</font> によって作成された
+        <font color="#259b24">SealNote Plus バックアップ</font> によって作成された
         <font color="#cc0000">暗号化されたバックアップ</font> ファイルを開いてください。
         ]]>
     </string>

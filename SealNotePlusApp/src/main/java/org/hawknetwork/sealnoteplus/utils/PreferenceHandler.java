@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 /**
- * Helper class to easily access preference values used by SealNote.
+ * Helper class to easily access preference values used by SealNote Plus.
  */
 public class PreferenceHandler {
     public final static String TAG = "PreferenceHandler";

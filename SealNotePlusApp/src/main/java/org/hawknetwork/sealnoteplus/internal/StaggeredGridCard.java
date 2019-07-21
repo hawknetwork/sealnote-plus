@@ -15,12 +15,12 @@ import it.gmariotti.cardslib.library.internal.CardHeader;
 
 
 /**
- * CardHeader for SealNote Card. Just changes typeface of header title.
+ * CardHeader for StaggeredGridCard. Just changes typeface of header title.
  * Not using XML for API Level 14 compatibility
  */
-class SealnoteCardHeader extends CardHeader {
-    public static final String TAG = "SealnoteCardHeader";
-    public SealnoteCardHeader(Context context) {
+class StaggeredGridCardHeader extends CardHeader {
+    public static final String TAG = "StaggeredGridCardHeader";
+    public StaggeredGridCardHeader(Context context) {
         super(context);
     }
 
@@ -41,21 +41,21 @@ class SealnoteCardHeader extends CardHeader {
  * Extends Card to glue with Note class. Uses Note for card content,
  * and adds note background to Card.
  */
-public class SealnoteCard extends Card {
-    public static final String TAG = "SealnoteCard";
+public class StaggeredGridCard extends Card {
+    public static final String TAG = "StaggeredGridCard";
 
     protected Note mNote;
 
-    public SealnoteCard(Context context) {
+    public StaggeredGridCard(Context context) {
         super(context, R.layout.cardcontent);
     }
 
     /**
-     * Takes a note, create a SealnoteCard and initialize it.
+     * Takes a note, create a StaggeredGridCard and initialize it.
      * @param context   Context to use
      * @param note      Note to attach with card
      */
-    public SealnoteCard(Context context, Note note) {
+    public StaggeredGridCard(Context context, Note note) {
         super(context, R.layout.cardcontent);
         setNote(note);
         init();
@@ -68,7 +68,7 @@ public class SealnoteCard extends Card {
         this.setCheckable(true);
 
         if (mNote != null && !mNote.getTitle().equals("")) {
-            CardHeader header = new SealnoteCardHeader(getContext());
+            CardHeader header = new StaggeredGridCardHeader(getContext());
             header.setTitle(mNote.getTitle());
             addCardHeader(header);
         }

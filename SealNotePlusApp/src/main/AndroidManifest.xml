@@ -8,11 +8,11 @@
     <application
             android:icon="@drawable/ic_launcher"
             android:label="@string/short_app_name"
-            android:theme="@style/Sealnote.Theme.Main"
-            android:name="org.hawknetwork.sealnoteplus.SealnoteApplication">
+            android:theme="@style/SealNotePlus.Theme.Main"
+            android:name="org.hawknetwork.sealnoteplus.SealNotePlusApplication">
         <activity
-                android:name="org.hawknetwork.sealnoteplus.SealnoteActivity"
-                android:theme="@style/Sealnote.Theme.Sealnote">
+                android:name="org.hawknetwork.sealnoteplus.NoteListActivity"
+                android:theme="@style/SealNotePlus.Theme.NoteList">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -21,11 +21,11 @@
         <activity
                 android:name="org.hawknetwork.sealnoteplus.NoteActivity"
                 android:label="@string/title_activity_note"
-                android:parentActivityName="org.hawknetwork.sealnoteplus.SealnoteActivity"
-                android:theme="@style/Sealnote.Theme.Note">
+                android:parentActivityName="org.hawknetwork.sealnoteplus.NoteListActivity"
+                android:theme="@style/SealNotePlus.Theme.Note">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="org.hawknetwork.sealnoteplus.SealnoteActivity"/>
+                    android:value="org.hawknetwork.sealnoteplus.NoteListActivity"/>
         </activity>
         <activity
                 android:name="org.hawknetwork.sealnoteplus.PasswordActivity"
@@ -35,26 +35,26 @@
         <activity
                 android:name="org.hawknetwork.sealnoteplus.SettingsActivity"
                 android:label="@string/title_activity_settings"
-                android:parentActivityName="org.hawknetwork.sealnoteplus.SealnoteActivity"
-                android:theme="@style/Sealnote.Theme.Main">
+                android:parentActivityName="org.hawknetwork.sealnoteplus.NoteListActivity"
+                android:theme="@style/SealNotePlus.Theme.Main">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="org.hawknetwork.sealnoteplus.SealnoteActivity"/>
+                    android:value="org.hawknetwork.sealnoteplus.NoteListActivity"/>
         </activity>
         <activity
                 android:name="org.hawknetwork.sealnoteplus.TagsEditorActivity"
                 android:label="@string/title_activity_edit_tags"
-                android:parentActivityName="org.hawknetwork.sealnoteplus.SealnoteActivity"
-                android:theme="@style/Sealnote.Theme.Main">
+                android:parentActivityName="org.hawknetwork.sealnoteplus.NoteListActivity"
+                android:theme="@style/SealNotePlus.Theme.Main">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
-                    android:value="org.hawknetwork.sealnoteplus.SealnoteActivity"/>
+                    android:value="org.hawknetwork.sealnoteplus.NoteListActivity"/>
         </activity>
 
         <activity
                 android:name="org.hawknetwork.sealnoteplus.WebViewActivity"
                 android:parentActivityName="org.hawknetwork.sealnoteplus.SettingsActivity"
-                android:theme="@style/Sealnote.Theme.Main">
+                android:theme="@style/SealNotePlus.Theme.Main">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="org.hawknetwork.sealnoteplus.SettingsActivity"/>
@@ -63,7 +63,7 @@
         <activity
                 android:name="org.hawknetwork.sealnoteplus.BackupActivity"
                 android:parentActivityName="org.hawknetwork.sealnoteplus.SettingsActivity"
-                android:theme="@style/Sealnote.Theme.Main"
+                android:theme="@style/SealNotePlus.Theme.Main"
                 android:label="@string/backup">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
@@ -73,7 +73,7 @@
         <activity
                 android:name="org.hawknetwork.sealnoteplus.RestoreActivity"
                 android:parentActivityName="org.hawknetwork.sealnoteplus.SettingsActivity"
-                android:theme="@style/Sealnote.Theme.Main"
+                android:theme="@style/SealNotePlus.Theme.Main"
                 android:label="@string/restore">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"

@@ -7,21 +7,21 @@ import android.widget.AdapterView;
 import com.nhaarman.listviewanimations.swinginadapters.AnimationAdapter;
 import com.nhaarman.listviewanimations.swinginadapters.prepared.ScaleInAnimationAdapter;
 import org.hawknetwork.sealnoteplus.R;
-import org.hawknetwork.sealnoteplus.data.SealnoteAdapter;
-import org.hawknetwork.sealnoteplus.fragment.SealnoteFragment;
+import org.hawknetwork.sealnoteplus.data.NoteListAdapter;
+import org.hawknetwork.sealnoteplus.fragment.NoteListFragment;
 import org.hawknetwork.sealnoteplus.utils.PreferenceHandler;
 
 /**
  * Fragment where all cards are listed in a staggered grid
  */
-public class StaggeredGridFragment extends SealnoteFragment {
+public class StaggeredGridFragment extends NoteListFragment {
     public final static String TAG = "StaggeredGridFragment";
 
     /**
      * Create and return adapter
      */
     @Override
-    protected SealnoteAdapter createAdapter() {
+    protected NoteListAdapter createAdapter() {
         if (mAdapter == null) {
             mAdapter = new StaggeredGridAdapter(getActivity(), null);
         }

@@ -11,5 +11,5 @@
           android:choiceMode="multipleChoiceModal"
           android:background="@android:color/white"
           android:clipToPadding="false"
-          style="@style/Sealnote.Theme.Main.SimpleListView"
+          style="@style/SealNotePlus.Theme.Main.SimpleListView"
         />

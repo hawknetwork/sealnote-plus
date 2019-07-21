@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import org.hawknetwork.sealnoteplus.R;
-import org.hawknetwork.sealnoteplus.SealnoteApplication;
+import org.hawknetwork.sealnoteplus.SealNotePlusApplication;
 import org.hawknetwork.sealnoteplus.data.DatabaseHandler;
 import org.hawknetwork.sealnoteplus.data.Note;
 
@@ -172,7 +172,7 @@ abstract public class MultiChoiceCallback implements ActionMode.Callback {
              */
             @Override
             protected Void doInBackground(SparseBooleanArray... sparseBooleanArrays) {
-                DatabaseHandler db = SealnoteApplication.getDatabase();
+                DatabaseHandler db = SealNotePlusApplication.getDatabase();
                 SparseBooleanArray mCheckedIds = sparseBooleanArrays[0];
 
                 for (int i = 0; i < mCheckedIds.size(); i++) {

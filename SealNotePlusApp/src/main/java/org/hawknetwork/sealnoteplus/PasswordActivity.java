@@ -14,8 +14,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.hawknetwork.sealnoteplus.R;
-
 import org.hawknetwork.sealnoteplus.data.DatabaseHandler;
 import org.hawknetwork.sealnoteplus.utils.TimeoutHandler;
 import org.hawknetwork.sealnoteplus.view.PasswordInput;
@@ -150,10 +148,10 @@ public class PasswordActivity extends Activity {
          * @return      true is successfully created/login to encrypted database
          */
         protected Boolean doInBackground(String... args) {
-            DatabaseHandler handler = SealnoteApplication.getDatabase();
+            DatabaseHandler handler = SealNotePlusApplication.getDatabase();
             handler.recycle();
             try {
-                SealnoteApplication.getDatabase().setPassword(args[0]);
+                SealNotePlusApplication.getDatabase().setPassword(args[0]);
                 handler.update();
             } catch (SQLiteException e) {
                 // Most likely wrong password provided
@@ -173,7 +171,7 @@ public class PasswordActivity extends Activity {
                 // clear all timers if any to avoid bouncing back here from activity
                 TimeoutHandler.instance().passwordTimeoutClear();
 
-                Intent intent = new Intent(PasswordActivity.this, SealnoteActivity.class);
+                Intent intent = new Intent(PasswordActivity.this, NoteListActivity.class);
                 PasswordActivity.this.startActivity(intent);
                 PasswordActivity.this.finish();
             } else {

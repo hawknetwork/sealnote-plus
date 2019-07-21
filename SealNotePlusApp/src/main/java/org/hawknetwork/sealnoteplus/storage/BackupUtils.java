@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.util.Log;
-import org.hawknetwork.sealnoteplus.SealnoteApplication;
+import org.hawknetwork.sealnoteplus.SealNotePlusApplication;
 import org.hawknetwork.sealnoteplus.data.DatabaseHandler;
 import net.sqlcipher.database.SQLiteDatabase;
 import net.sqlcipher.database.SQLiteException;
@@ -77,7 +77,7 @@ public class BackupUtils {
      * Restores give database as new database
      */
     public static File restoreDatabase(Context context, File file) throws IOException {
-        DatabaseHandler dbHandler = SealnoteApplication.getDatabase();
+        DatabaseHandler dbHandler = SealNotePlusApplication.getDatabase();
         dbHandler.close();
         dbHandler.recycle();
 

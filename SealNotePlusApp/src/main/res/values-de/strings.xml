@@ -5,7 +5,7 @@
     <string name="short_app_name">SealNote+</string>
     <string name="full_app_name">SealNote Plus</string>
     <string name="app_description">Die Absicht ist einfach. Eine schnelle, einfache und <b>sichere</b> Notizanwendung anzubieten. Ihre Notizen werden verschlüsselt unter Verwendung eines starken 256-bit AES Algorithmus. Sie müssen nicht länger besorgt sein, daß böswillige Leute sich Zugang zu Ihren privaten Notizen verschaffen.</string>
-    <string name="app_credits"><b>TwistedPlane:</b>\nwww.twistedplane.com\ncontact@twistedplane.com"\n<b>Contributors:</b>\nhttps://github.com/vishesh/sealnote/graphs/contributors</string>
+    <string name="app_credits"><b>GitHub:</b>https://github.com/hawknetwork/sealnote-plus\n<b>Contributors:</b>\nhttps://github.com/hawknetwork/sealnote-plus/graphs/contributors</string>
 
     <!-- Activities -->
     <string name="title_activity_note">" "</string>
@@ -131,7 +131,7 @@
     <string name="info_restore_message">
         <![CDATA[
         Bitte öffnen Sie <font color="#cc0000">verschlüsselte Backup</font> Datei, erstellt
-        von <font color="#259b24">SealNote backup</font>.
+        von <font color="#259b24">SealNote Plus backup</font>.
         ]]>
     </string>
 

@@ -7,53 +7,53 @@
 <resources>
 
     <!-- Base activity theme. -->
-    <style name="Sealnote.Theme.Main" parent="android:Theme.Holo.Light">
-        <item name="android:actionBarStyle">@style/Sealnote.Theme.Main.ActionBar</item>
+    <style name="SealNotePlus.Theme.Main" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/SealNotePlus.Theme.Main.ActionBar</item>
         <item name="android:actionBarItemBackground">@drawable/actionbar_item_selector</item>
-        <item name="android:actionOverflowButtonStyle">@style/Sealnote.Theme.Main.ActionBar.Overflow</item>
+        <item name="android:actionOverflowButtonStyle">@style/SealNotePlus.Theme.Main.ActionBar.Overflow</item>
     </style>
 
-    <style name="Sealnote.Theme.Main.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+    <style name="SealNotePlus.Theme.Main.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:background">@drawable/ab_background</item>
-        <item name="android:titleTextStyle">@style/Sealnote.Theme.Main.ActionBar.Title</item>
+        <item name="android:titleTextStyle">@style/SealNotePlus.Theme.Main.ActionBar.Title</item>
         <item name="android:icon">@drawable/ic_home</item>
     </style>
 
-    <style name="Sealnote.Theme.Main.ActionBar.Title" parent="@android:style/Widget.Holo.Light.ActionBar">
+    <style name="SealNotePlus.Theme.Main.ActionBar.Title" parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">22sp</item>
         <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="Sealnote.Theme.Main.ActionBar.Overflow" parent="@android:style/Widget.Holo.Light.ActionButton.Overflow">
+    <style name="SealNotePlus.Theme.Main.ActionBar.Overflow" parent="@android:style/Widget.Holo.Light.ActionButton.Overflow">
         <item name="android:src">@drawable/ic_action_core_overflow</item>
     </style>
 
-    <!-- Sealnote Activity Theme -->
-    <style name="Sealnote.Theme.Sealnote" parent="android:Theme.Holo.Light">
-        <item name="android:actionBarStyle">@style/Sealnote.Theme.Sealnote.ActionBar</item>
+    <!-- Note List Activity Theme -->
+    <style name="SealNotePlus.Theme.NoteList" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/SealNotePlus.Theme.NoteList.ActionBar</item>
         <item name="android:actionBarItemBackground">@drawable/actionbar_item_selector</item>
         <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:actionOverflowButtonStyle">@style/Sealnote.Theme.Main.ActionBar.Overflow</item>
+        <item name="android:actionOverflowButtonStyle">@style/SealNotePlus.Theme.Main.ActionBar.Overflow</item>
     </style>
 
-    <style name="Sealnote.Theme.Sealnote.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+    <style name="SealNotePlus.Theme.NoteList.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:background">@drawable/ab_background</item>
-        <item name="android:titleTextStyle">@style/Sealnote.Theme.Main.ActionBar.Title</item>
+        <item name="android:titleTextStyle">@style/SealNotePlus.Theme.Main.ActionBar.Title</item>
         <item name="android:icon">@drawable/ic_home</item>
     </style>
 
     <!-- Note activity theme. -->
-    <style name="Sealnote.Theme.Note" parent="android:Theme.Holo.Light">
-        <item name="android:actionBarStyle">@style/Sealnote.Theme.Note.ActionBar</item>
+    <style name="SealNotePlus.Theme.Note" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/SealNotePlus.Theme.Note.ActionBar</item>
         <item name="android:actionBarItemBackground">@drawable/actionbar_item_selector</item>
-        <item name="android:actionOverflowButtonStyle">@style/Sealnote.Theme.Main.ActionBar.Overflow</item>
+        <item name="android:actionOverflowButtonStyle">@style/SealNotePlus.Theme.Main.ActionBar.Overflow</item>
         <item name="android:actionMenuTextColor">#bbffffff</item>
         <item name="android:windowActionBarOverlay">true</item>
     </style>
 
-    <style name="Sealnote.Theme.Note.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+    <style name="SealNotePlus.Theme.Note.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:background">#66000000</item>
         <item name="android:icon">@drawable/ic_home</item>
     </style>
@@ -92,7 +92,7 @@
 
 
     <!-- Simple List View Item -->
-    <style name="Sealnote.Theme.Main.SimpleListView" parent="android:Widget.Holo.Light.ListView">
+    <style name="SealNotePlus.Theme.Main.SimpleListView" parent="android:Widget.Holo.Light.ListView">
         <item name="android:listSelector">@drawable/simple_list_view_item_background</item>
         <item name="android:divider">@drawable/simple_list_view_divider</item>
         <item name="android:dividerHeight">1px</item>

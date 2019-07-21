@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-    Action Bar for SealnoteActivity
+    Action Bar for NoteListActivity
 -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">

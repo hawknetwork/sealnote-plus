@@ -17,20 +17,20 @@ import android.widget.TextView;
 import org.hawknetwork.sealnoteplus.R;
 import org.hawknetwork.sealnoteplus.data.AdapterLoader;
 import org.hawknetwork.sealnoteplus.data.Note;
-import org.hawknetwork.sealnoteplus.data.SealnoteAdapter;
+import org.hawknetwork.sealnoteplus.data.NoteListAdapter;
 import org.hawknetwork.sealnoteplus.utils.Misc;
 
 /**
  * Main fragment where all cards are listed in a staggered grid
  */
-abstract public class SealnoteFragment extends Fragment implements
+abstract public class NoteListFragment extends Fragment implements
         LoaderManager.LoaderCallbacks<Cursor> {
-    public final static String TAG = "SealnoteFragment";
+    public final static String TAG = "NoteListFragment";
 
     /**
      * Adapter used by Staggered Grid View to display note cards
      */
-    protected SealnoteAdapter mAdapter;
+    protected NoteListAdapter mAdapter;
     protected AdapterView mAdapterView;
     protected Note.Folder mCurrentFolder;
     protected int mCurrentTag;
@@ -54,7 +54,7 @@ abstract public class SealnoteFragment extends Fragment implements
     /**
      * Abstract method that should return the adapter for the view
      */
-    abstract protected SealnoteAdapter createAdapter();
+    abstract protected NoteListAdapter createAdapter();
 
     /**
      * Abstract method that should load given cursor to adapter and
@@ -78,7 +78,7 @@ abstract public class SealnoteFragment extends Fragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "Creating SealNote fragment...");
+        Log.d(TAG, "Creating note list fragment...");
 
         if (!Misc.isPasswordLoaded()){
             Misc.startPasswordActivity(getActivity());
@@ -121,7 +121,7 @@ abstract public class SealnoteFragment extends Fragment implements
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View fragmentView = inflater.inflate(R.layout.fragment_sealnote, container, false);
+        View fragmentView = inflater.inflate(R.layout.fragment_note_list, container, false);
 
         mEmptyGridLayout = fragmentView.findViewById(R.id.layout_empty_grid);
         mEmptyGeneric = (TextView) fragmentView.findViewById(R.id.empty_folder_generic);
