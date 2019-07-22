@@ -20,7 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-Portions of this codebase are taken from Sealnote (with or without modifications). These portions are also licensed under The MIT License (MIT) as follows:
+Portions of this codebase are taken from the original SealNote app codebase (with or without modifications). These original portions (excluding modifications) are also licensed under The MIT License (MIT) as follows:
 
 Copyright (c) 2015 Vishesh Yadav
 
