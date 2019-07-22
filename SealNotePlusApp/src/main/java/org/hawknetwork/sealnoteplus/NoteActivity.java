@@ -375,7 +375,7 @@ public class NoteActivity extends Activity implements ColorDialogFragment.ColorC
      */
     private void updateShareIntent() {
         if (mShareIntent == null) {
-            //FIX: crash when orientation is changed
+            //FIXME: crash when orientation is changed
             return;
         }
 
