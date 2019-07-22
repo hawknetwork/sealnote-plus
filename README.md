@@ -50,7 +50,7 @@ server is a security hole which should be avoided.
 
 #### I can't take screenshots from app or I see blank screenshot in application switcher. What's wrong?
 
-You probably have enabled "Secure Window" feature in SealNote settings.
+You probably have enabled "Secure Window" feature in SealNote Plus settings.
 Disable it to be able to take screenshots or show window content in application
 switcher.
 
@@ -79,7 +79,7 @@ improves some workflow or security for a user.
 
 ### How to submit a pull request
 
-1. Clone sealnote plus: `git clone https://github.com/hawknetwork/sealnote-plus.git && cd sealnote-plus`
+1. Clone sealnote-plus: `git clone https://github.com/hawknetwork/sealnote-plus.git && cd sealnote-plus`
 2. Verify that build succeeds: `./gradlew assembleDebug`
 3. Create a topic branch: `git checkout -b feature`
 4. Make your changes.
