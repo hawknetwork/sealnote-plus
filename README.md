@@ -2,6 +2,8 @@
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
+**PLEASE NOTE THAT WE ARE NOT CURRENTLY ACCEPTING PRs, UNTIL SOME INITIAL REFACTORING WORK IS COMPLETE.**
+
 SealNote Plus is a simple notes/notepad application which focuses on security and
 simplicity. Your notes are password protected using 256-bit AES encryption.
 Keep sensitive information always available without compromising security!
