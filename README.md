@@ -4,64 +4,62 @@
 
 **PLEASE NOTE THAT WE ARE NOT CURRENTLY ACCEPTING PRs, UNTIL SOME INITIAL REFACTORING WORK IS COMPLETE.**
 
-SealNote Plus is a simple notes/notepad application which focuses on security and
-simplicity. Your notes are password protected using 256-bit AES encryption.
-Keep sensitive information always available without compromising security!
+SealNote Plus is a simple note-taking application developed with both security and simplicity in mind. Your notes are password-protected using 256-bit AES encryption.
+Store sensitive information easily without compromising security!
 
 * Password protection (256-bit AES encryption)
-* Color code your notes
-* Password expires after configurable timeout
-* Protect content from screenshots, window switcher and other non-secure
+* Color-coded notes
+* Passwords expire after a configurable timeout
+* Your notes are protected from screenshots, the application switcher and other non-secure
   displays
-* Multi-column layout with number of columns optimized for your screen size.
-* Simple and easy to use UI/UX
+* Simple and easy to use UI
+* Multi-column layout
 * No ads ever!
 
-Advantage of encrypting notes
+Advantages of encrypting notes
 -----------------------------
 
-* Keep private information such as credit cards, bank account and passwords
+* Keep private information such as credit cards, bank account information and passwords
   in a single place
 * Notes are encrypted locally so no one else can access them, unless they
-  have the password.
-* Since encryption is done at storage level, if you ever lose your phone, you won't lose your
-  notes to thieves.
+  have the password
+* Since encryption is done at the storage level, if you ever lose your phone, you won't lose your
+  notes to thieves
 
 Frequently Asked Questions (FAQ)
 --------------------------------
 
-#### Why not use XYZ app with application lock?
+#### Why shouldn't I use XYZ app with an application lock?
 
-Application locks prevents user from opening application, but does not secure
-the storage. Hence adversary can simply access the storage file directly and
-read the content.
+An application lock prevents users from opening application, but does not secure
+any of your data. Any malicious person can access the data stored behind an application lock.
 
-#### If someone connects phone to computer and copies/read the data file storingall the notes, can't they read everything?
+#### Can someone else connect my phone to a computer and copy/read my notes?
 
-They can't. No one can, regardless how they access the data file (unless they
-have your secret password). The application uses a technique called encryption.
-Encryption uses your password to convert notes to unreadable form which makes
-no sense to anyone even computer. This can be converted back to readable text
-only using exact same password.
+No, they can't. No one can, regardless of how they access the data file (unless they
+have your password). The application uses a technique called encryption.
+Encryption uses your password to convert notes into an unreadable form which makes
+no sense to anyone even computer. This can later be decrypted back into readable text
+only by using the exact same password the file was encrypted with.
 
 #### I forgot my password. How do I recover my notes?
 
-You can't. Your password is not stored anywhere but in your brain. If you lose
-your password, you will lose all your notes. Storing password locally or on
-server is a security hole which should be avoided.
+You can't. Your password is not stored anywhere but in your brain (or preferably written down). If you lose
+your password, you will lose all your notes. Storing a password on your device or on a remote
+server may allow someone else to find and steal it, giving them full access to your notes.
 
-#### I can't take screenshots from app or I see blank screenshot in application switcher. What's wrong?
+#### I can't take screenshots in the app. What's wrong?
 
-You probably have enabled "Secure Window" feature in SealNote Plus settings.
-Disable it to be able to take screenshots or show window content in application
+You probably have enabled the "Secure Window" feature in the SealNote Plus settings.
+Disable it if you would like to take screenshots or show window content in the application
 switcher.
 
 History
 --------------------------------
 
-This project is a fork of the original SealNote codebase, which is no longer maintained. That app is still available on Play Store, but has serious bugs, for example backup is broken on Android 8+.
+This project is a fork of the original SealNote codebase, which is no longer maintained. That app is still available on Play Store and F-Droid, but it has serious bugs and is no longer being updated.
 
-SealNote Plus is currently not published on Play Store, but will be in future, after necessary improvements have been made.
+SealNote Plus is currently not published on Play Store, but will be in the future, after necessary improvements have been made.
 
 Contributing
 --------------------------------
@@ -72,7 +70,7 @@ understand how and what to contribute.
 If you need ideas for contribution, please check currently [open
 issues](https://github.com/hawknetwork/sealnote-plus/issues). If you want to propose a
 new feature, please open a new issue. A good feature can be something which
-improves some workflow or security for a user.
+improves the workflow or security for a user.
 
 ### Tools of trade
 
@@ -93,7 +91,7 @@ improves some workflow or security for a user.
 ### Style Guide
 
 The project follows [Google's Java Style
-Guide](https://google.github.io/styleguide/javaguide.html) with following
+Guide](https://google.github.io/styleguide/javaguide.html) with the following
 exceptions:
 
 * 4 spaces indentation instead of 2.
